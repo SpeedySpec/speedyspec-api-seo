@@ -1,0 +1,60 @@
+{
+    "name": "speedyspec/wp-seo-legacy",
+    "version": "0.1.0",
+    "description": "SpeedySpec WP SEO API - Legacy WordPress Functions",
+    "type": "library",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "php": ">=8.4",
+        "speedyspec/wp-seo-domain": "^0.1",
+        "speedyspec/wp-seo-app-implementation": "^1.0",
+        "speedyspec/wp-seo-infra-implementation": "^1.0"
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.0|^4.0",
+        "speedyspec/wp-seo-app": "^0.1",
+        "speedyspec/wp-seo-infra-memory": "^0.1",
+        "speedyspec/wp-seo-infra-wp": "^0.1"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../*"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SpeedySpec\\WP\\Seo\\Legacy\\": "src/"
+        },
+        "files": [
+            "functions/seo.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SpeedySpec\\WP\\Seo\\Legacy\\Tests\\": "tests/"
+        }
+    },
+    "archive": {
+        "exclude": [
+            "/docs",
+            "/tests",
+            "/.github",
+            "/.git",
+            "/.editorconfig",
+            "/.gitattributes",
+            "/.gitignore",
+            "/phpunit.xml",
+            "/CHANGELOG.md",
+            "/.release-please-manifest.json",
+            "/release-please-config.json"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}

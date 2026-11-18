@@ -1,0 +1,56 @@
+{
+    "name": "speedyspec/wp-seo-infra-memory",
+    "version": "0.1.0",
+    "description": "SpeedySpec WP SEO API - In-Memory Infrastructure",
+    "type": "library",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "php": ">=8.4",
+        "speedyspec/wp-seo-domain": "^0.1"
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.0|^4.0",
+        "speedyspec/wp-seo-contract-tests": "^0.1"
+    },
+    "provide": {
+        "speedyspec/wp-seo-infra-implementation": "1.0"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../*"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SpeedySpec\\WP\\Seo\\Infra\\Memory\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SpeedySpec\\WP\\Seo\\Infra\\Memory\\Tests\\": "tests/"
+        }
+    },
+    "archive": {
+        "exclude": [
+            "/docs",
+            "/tests",
+            "/.github",
+            "/.git",
+            "/.editorconfig",
+            "/.gitattributes",
+            "/.gitignore",
+            "/phpunit.xml",
+            "/CHANGELOG.md",
+            "/.release-please-manifest.json",
+            "/release-please-config.json"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "name": "speedyspec/wp-seo-domain",
+    "version": "0.1.0",
+    "description": "SpeedySpec WP SEO API - Domain Package",
+    "type": "library",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "php": ">=8.4"
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.0|^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SpeedySpec\\WP\\Seo\\Domain\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SpeedySpec\\WP\\Seo\\Domain\\Tests\\": "tests/"
+        }
+    },
+    "archive": {
+        "exclude": [
+            "/docs",
+            "/tests",
+            "/.github",
+            "/.git",
+            "/.editorconfig",
+            "/.gitattributes",
+            "/.gitignore",
+            "/phpunit.xml",
+            "/CHANGELOG.md",
+            "/.release-please-manifest.json",
+            "/release-please-config.json"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
